@@ -1,5 +1,27 @@
+import styled from "styled-components";
+
 const Footer = () => {
-    return <div>Footer</div>;
+    return (
+        <FooterWrap>
+            <FooterInner>
+                <p>Copyright ⓒ Jo Seung Hyeon All Right Reserved.</p>
+            </FooterInner>
+        </FooterWrap>
+    );
 };
+
+const FooterWrap = styled.div`
+    height: 80px;
+`;
+
+const FooterInner = styled.div`
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    color: #fff;
+`;
 
 export default Footer;
