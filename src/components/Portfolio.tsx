@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
-import PortfolioCard from "../card/PortfolioCard";
+import PortfolioCard from "./card/PortfolioCard";
 
 const Portfolio = () => {
     return (

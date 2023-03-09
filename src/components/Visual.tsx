@@ -14,7 +14,7 @@ const Visual = () => {
 };
 
 const VisualWrap = styled.div`
-    width: 100vw;
+    width: 100%;
     text-align: center;
     margin-top: 80px;
     background-color: #ffc75f;

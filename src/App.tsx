@@ -11,7 +11,12 @@ const GlobalStyle = createGlobalStyle`
 :root{
     --color-white: #ffffff;
     --color-black: #000000;
-
+    --color-html: #f67925;
+    --color-css: #379ad6;
+    --color-js: #f7e018;
+    --color-ts: #007acc;
+    --color-react: #61dbfb;
+    
     
 }
 

@@ -2,22 +2,50 @@ import styled, { css } from "styled-components";
 import { FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiReact } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
+import SkillModal from "./modal/SkillModal";
+import { useState } from "react";
 
 const Skills = () => {
+    const [htmlModal, setHtmlModal] = useState(false);
+    const [cssModal, setCssModal] = useState(false);
+    const [jsModal, setJSModal] = useState(false);
+    const [tsModal, setTSModal] = useState(false);
+    const [reactModal, setReactModal] = useState(false);
+    const [gitModal, setGitModal] = useState(false);
     return (
         <SkillWrap>
             <h2>Skills</h2>
             <SkillContainer>
-                <StyledFaHtml5 />
-                <StyledFaFaCss3Alt />
-                <StyledFaSiJavascript />
-                <StyledFaSiTypescript />
-                <StyledFaSiReact />
-                <StyledAiFillGithub />
+                <StyledFaHtml5 onClick={() => setHtmlModal(!htmlModal)} />
+                {htmlModal && (
+                    <SkillModal Modal={setHtmlModal} title={"HTML5"} />
+                )}
+                <StyledFaFaCss3Alt onClick={() => setCssModal(!htmlModal)} />
+                {cssModal && <SkillModal Modal={setCssModal} title={"CSS"} />}
+                <StyledFaSiJavascript onClick={() => setJSModal(!htmlModal)} />
+                {jsModal && (
+                    <SkillModal Modal={setJSModal} title={"JAVASCRIPT"} />
+                )}
+                <StyledFaSiTypescript onClick={() => setTSModal(!htmlModal)} />
+                {tsModal && (
+                    <SkillModal Modal={setTSModal} title={"TYPESCRIPT"} />
+                )}
+                <StyledFaSiReact onClick={() => setReactModal(!htmlModal)} />
+                {reactModal && (
+                    <SkillModal Modal={setReactModal} title={"REACT"} />
+                )}
+                <StyledAiFillGithub onClick={() => setGitModal(!htmlModal)} />
+                {gitModal && <SkillModal Modal={setGitModal} title={"GIT"} />}
             </SkillContainer>
         </SkillWrap>
     );
 };
+
+const SkillWrap = styled.div`
+    text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+`;
 
 const SkillContainer = styled.div`
     display: grid;
@@ -48,32 +76,28 @@ const IconStyle = css`
 `;
 
 const StyledFaHtml5 = styled(FaHtml5)`
-    color: #f67925;
+    color: var(--color-html);
     ${IconStyle}
 `;
 const StyledFaFaCss3Alt = styled(FaCss3Alt)`
-    color: #379ad6;
+    color: var(--color-css);
     ${IconStyle}
 `;
 const StyledFaSiJavascript = styled(SiJavascript)`
-    color: #f7e018;
+    color: var(--color-js);
     ${IconStyle}
 `;
 const StyledFaSiTypescript = styled(SiTypescript)`
-    color: #007acc;
+    color: var(--color-ts);
     ${IconStyle}
 `;
 const StyledFaSiReact = styled(SiReact)`
-    color: #61dbfb;
+    color: var(--color-react);
     ${IconStyle}
 `;
 const StyledAiFillGithub = styled(AiFillGithub)`
-    color: #000;
+    color: var(--color-black);
     ${IconStyle}
-`;
-
-const SkillWrap = styled.div`
-    text-align: center;
 `;
 
 export default Skills;
