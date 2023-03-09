@@ -7,6 +7,14 @@ import Visual from "./components/Visual";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
+:root{
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    
+}
+
   * {
     box-sizing: border-box;
     }
@@ -28,6 +36,11 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+    a{
+    text-decoration:none;
+    color: black;
 }
 
 `;
