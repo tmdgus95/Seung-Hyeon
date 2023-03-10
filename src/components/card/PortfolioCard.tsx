@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+// title, feature, git 주소, 배포 주소, stack
+
 const PortfolioCard = () => {
     return (
         <PortfolioCardWrap>
