@@ -103,7 +103,11 @@ const Skills = () => {
 const SkillWrap = styled.div`
     text-align: center;
     max-width: 1280px;
+    padding: 70px 15px;
     margin: 0 auto;
+    h2 {
+        padding: 30px 0;
+    }
 `;
 
 const SkillContainer = styled.div`

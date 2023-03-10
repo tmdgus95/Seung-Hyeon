@@ -48,7 +48,9 @@ const Portfolio = () => {
     );
 };
 
-const PortfolioWrap = styled.div``;
+const PortfolioWrap = styled.div`
+    padding: 75px 15px;
+`;
 const PortfolioInner = styled.div`
     max-width: 1280px;
     margin: 80px auto;
@@ -56,6 +58,9 @@ const PortfolioInner = styled.div`
 const PortfolioContent = styled.div`
     text-align: center;
     height: 70vh;
+    h2 {
+        padding-bottom: 50px;
+    }
 `;
 
 const StyledPortfolioSwiper = styled(Swiper)`

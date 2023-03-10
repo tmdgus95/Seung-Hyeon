@@ -35,6 +35,7 @@ const IconStyle = css`
 
 const ContactWrap = styled.div`
     text-align: center;
+    padding: 75px 15px;
 `;
 
 const ContactInner = styled.div``;
