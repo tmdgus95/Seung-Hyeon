@@ -29,6 +29,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderInner = styled.div`
     margin: 0 auto;
+    padding: 0 20px;
     width: 100vw;
     max-width: 1280px;
     height: 80px;
@@ -65,6 +66,12 @@ const HeaderNav = styled.nav`
 
     li:hover::after {
         width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        ul {
+            display: none;
+        }
     }
 `;
 
