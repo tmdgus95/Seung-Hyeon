@@ -3,15 +3,18 @@ import styled from "styled-components";
 interface SkillModalProps {
     Modal: React.Dispatch<React.SetStateAction<boolean>>;
     title: string;
+    contents?: string[];
 }
 
-const SkillModal = ({ Modal, title }: SkillModalProps) => {
+const SkillModal = ({ Modal, title, contents }: SkillModalProps) => {
     return (
         <SkillModalWrap onClick={() => Modal(false)}>
             <SkillModalInner>
                 <p>{title}</p>
                 <p>내가 할수있는것</p>
-                <p>공부해야할것</p>
+                {contents?.map((content, i) => (
+                    <p key={i}>{content}</p>
+                ))}
             </SkillModalInner>
         </SkillModalWrap>
     );
