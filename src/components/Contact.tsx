@@ -8,7 +8,7 @@ const Contact = () => {
     const [modal, setModal] = useState(false);
     const handleModal = () => setModal(!modal);
     return (
-        <ContactWrap>
+        <ContactWrap id="Contact">
             <ContactInner>
                 <h2>Contact Me</h2>
                 <ContactContent>

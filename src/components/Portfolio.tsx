@@ -8,7 +8,7 @@ import PortfolioCard from "./card/PortfolioCard";
 
 const Portfolio = () => {
     return (
-        <PortfolioWrap>
+        <PortfolioWrap id="Portfolio">
             <PortfolioInner>
                 <PortfolioContent>
                     <h2>Portfolio</h2>
@@ -49,7 +49,7 @@ const Portfolio = () => {
 };
 
 const PortfolioWrap = styled.div`
-    padding: 75px 15px;
+    padding: 40px 15px;
 `;
 const PortfolioInner = styled.div`
     max-width: 1280px;

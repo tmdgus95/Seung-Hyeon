@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const Header = () => {
     return (
@@ -7,10 +8,50 @@ const Header = () => {
                 <p>JSH</p>
                 <HeaderNav>
                     <ul>
-                        <li>Visual</li>
-                        <li>Skills</li>
-                        <li>Portfolio</li>
-                        <li>Contact</li>
+                        <li>
+                            <Link
+                                to="Visual"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                offset={-70}
+                            >
+                                Visual
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="Skills"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                offset={-70}
+                            >
+                                Skills
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="Portfolio"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                offset={-70}
+                            >
+                                Portfolio
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                to="Contact"
+                                spy={true}
+                                smooth={true}
+                                duration={500}
+                                offset={-70}
+                            >
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </HeaderNav>
             </HeaderInner>
@@ -25,6 +66,7 @@ const HeaderWrapper = styled.header`
     right: 0;
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
+    z-index: 6;
 `;
 
 const HeaderInner = styled.div`

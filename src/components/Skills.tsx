@@ -44,7 +44,7 @@ const Skills = () => {
     ];
     const gitContent = ["기본은 압니다."];
     return (
-        <SkillWrap>
+        <SkillWrap id="Skills">
             <h2>Skills</h2>
             <SkillContainer>
                 <StyledFaHtml5 onClick={() => setHtmlModal(!htmlModal)} />

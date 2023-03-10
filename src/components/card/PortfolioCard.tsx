@@ -9,7 +9,7 @@ const PortfolioCard = () => {
                 <h3>담화마켓</h3>
                 <PortfolioCardContent>
                     <img
-                        src="/images/포트폴리오임시이미지2.gif"
+                        src="/images/포트폴리오임시이미지.jpg"
                         alt="포트폴리오 이미지"
                     />
                     <div>
