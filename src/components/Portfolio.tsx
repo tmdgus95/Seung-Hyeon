@@ -61,6 +61,7 @@ const Portfolio = () => {
 
 const PortfolioWrap = styled.div`
     padding: 5px 5px;
+    margin-bottom: 50px;
 `;
 const PortfolioInner = styled.div`
     max-width: 1280px;
@@ -68,7 +69,7 @@ const PortfolioInner = styled.div`
 `;
 const PortfolioContent = styled.div`
     text-align: center;
-    height: 70vh;
+    height: 100%;
     h2 {
         padding-bottom: 50px;
     }
@@ -78,15 +79,15 @@ const StyledPortfolioSwiper = styled(Swiper)`
     border-radius: 20px;
     width: 100%;
     height: 100%;
-    .swiper-button-next {
-        right: 10px; /* 오른쪽으로 10px 이동 */
+    @media (max-width: 768px) {
+        height: 110%;
     }
 `;
 
 const StyledPortfolio = styled(SwiperSlide)`
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: var(--color-white);
     display: flex;
     justify-content: center;
     align-items: center;

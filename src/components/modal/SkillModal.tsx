@@ -33,7 +33,7 @@ const SkillModalInner = styled.div`
     position: absolute;
     top: 25%;
     left: 25%;
-    background: white;
+    background: var(--color-white);
     width: 50%;
     height: 25%;
 `;

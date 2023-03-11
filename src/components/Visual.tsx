@@ -15,7 +15,7 @@ const VisualWrap = styled.div`
     height: 600px;
     text-align: center;
     margin-top: 80px;
-    background-color: #ffc75f;
+    background-color: var(--color-visual-bg);
     padding: 75px 15px;
     color: var(--color-white);
     h2 {

@@ -36,6 +36,7 @@ const IconStyle = css`
 const ContactWrap = styled.div`
     text-align: center;
     padding: 75px 15px;
+    background: var(--color-whit);
 `;
 
 const ContactInner = styled.div``;
@@ -52,12 +53,12 @@ const ContactContent = styled.div`
 `;
 
 const StyledAiFillGithub = styled(AiFillGithub)`
-    color: #000;
+    color: var(--color-black);
     ${IconStyle}
 `;
 
 const StyledSiGmail = styled(SiGmail)`
-    color: red;
+    color: var(--color-gmail);
     cursor: pointer;
     ${IconStyle}
 `;

@@ -43,9 +43,11 @@ const PortfolioCardWrap = styled.div`
     max-width: 1280px;
     width: 1280px;
     height: 100%;
+    margin-bottom: 80px;
 `;
 const PortfolioCardInner = styled.div`
     width: 100%;
+
     h3 {
         padding: 40px;
     }
@@ -72,6 +74,19 @@ const PortfolioCardContent = styled.div`
     }
     p {
         margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        div {
+            margin-left: 0;
+            width: 80%;
+        }
     }
 `;
 

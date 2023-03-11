@@ -11,11 +11,15 @@ const GlobalStyle = createGlobalStyle`
 :root{
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-visual-bg: #ffc75f;
+    --color-footer-black: #222;
+    --color-border-gray: #e5e5e5;
+    --color-gmail: #df0f0f;
     --color-html: #f67925;
     --color-css: #379ad6;
     --color-js: #f7e018;
     --color-ts: #007acc;
-    --color-react: #61dbfb;
+    --color-react: #61dbfb;    
     
     
 }

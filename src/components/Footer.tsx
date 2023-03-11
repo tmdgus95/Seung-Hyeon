@@ -20,8 +20,8 @@ const FooterInner = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #222;
-    color: #fff;
+    background-color: var(--color-footer-black);
+    color: var(--color-white);
 `;
 
 export default Footer;

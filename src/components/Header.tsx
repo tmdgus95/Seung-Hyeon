@@ -64,8 +64,8 @@ const HeaderWrapper = styled.header`
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #e5e5e5;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border-gray);
     z-index: 6;
 `;
 
@@ -102,7 +102,7 @@ const HeaderNav = styled.nav`
         bottom: -5px;
         width: 0%;
         height: 2px;
-        background-color: black;
+        background-color: var(--color-black);
         transition: width 0.2s ease-in-out;
     }
 
