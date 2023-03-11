@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface SkillModalProps {
     Modal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -31,11 +31,20 @@ const SkillModalWrap = styled.div`
 `;
 const SkillModalInner = styled.div`
     position: absolute;
-    top: 25%;
+    top: 32.5%;
     left: 25%;
     background: var(--color-white);
     width: 50%;
-    height: 25%;
+    height: 20%;
+
+    @media (max-width: 1279px) and (min-width: 768px) {
+        top: 37%;
+        height: 20%;
+    }
+
+    @media (max-width: 767px) {
+        top: 47%;
+    }
 `;
 
 export default SkillModal;

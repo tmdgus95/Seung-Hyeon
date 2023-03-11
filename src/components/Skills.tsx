@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
-import { FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiReact } from "react-icons/si";
-import { AiFillGithub } from "react-icons/ai";
-import SkillModal from "./modal/SkillModal";
-import { useState } from "react";
+import styled, { css } from 'styled-components';
+import { FaHtml5, FaCss3Alt } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiReact } from 'react-icons/si';
+import { AiFillGithub } from 'react-icons/ai';
+import SkillModal from './modal/SkillModal';
+import { useState } from 'react';
 
 const Skills = () => {
     const [htmlModal, setHtmlModal] = useState(false);
@@ -14,60 +14,56 @@ const Skills = () => {
     const [gitModal, setGitModal] = useState(false);
 
     const htmlContent = [
-        "필수적으로 사용되는 태그의 의미를 알고 적절하게 사용할 수 있습니다.",
-        "시맨틱 태그에 대해 이해를 하고 있습니다.",
-        "폼 요소를 이용해 사용자에게 데이터를 입력받고 서버로 보낼 수 있습니다.",
-        "웹 표준과 웹 접근성을 준수하려고 노력합니다.",
+        '필수적으로 사용되는 태그의 의미를 알고 적절하게 사용할 수 있습니다.',
+        '시맨틱 태그에 대해 이해를 하고 있습니다.',
+        '폼 요소를 이용해 사용자에게 데이터를 입력받고 서버로 보낼 수 있습니다.',
+        '웹 표준과 웹 접근성을 준수하려고 노력합니다.',
     ];
     const cssContent = [
-        "css선택자에 대해 이해하고 있으면 잘 활용할 수 있습니다.",
-        "박스 모델에 대해 잘 알고 있으면 block과 inline에 대해 잘 알고 있습니다.",
-        "flex와 grid를 이용하여 레이아웃을 잡을 수 있습니다.",
-        "크로스 브라우징을 해결할 수 있습니다.??????",
-        "styledcomponent,tailwind와 같은 라이브러리를 이용하여 작업할 수 있습니다.",
+        'css선택자에 대해 이해하고 있으면 잘 활용할 수 있습니다.',
+        '박스 모델에 대해 잘 알고 있으면 block과 inline에 대해 잘 알고 있습니다.',
+        'flex와 grid를 이용하여 레이아웃을 잡을 수 있습니다.',
+        '크로스 브라우징을 해결할 수 있습니다.??????',
+        'styledcomponent,tailwind와 같은 라이브러리를 이용하여 작업할 수 있습니다.',
     ];
     const jsContent = [
-        "let,const,arroy function 같은 es6에 대해 알고 있습니다.",
-        "DOM에 대해 알고있으면 조작할 수 있습니다.",
-        "AJAX를 이용해서 서버와 비동기 통신을 할수있습니다.",
-        "다양한 이벤트를 이벤트리스너를 통해 구현할 수 있습니다.",
+        'let,const,arroy function 같은 es6에 대해 알고 있습니다.',
+        'DOM에 대해 알고있으면 조작할 수 있습니다.',
+        'AJAX를 이용해서 서버와 비동기 통신을 할수있습니다.',
+        '다양한 이벤트를 이벤트리스너를 통해 구현할 수 있습니다.',
     ];
-    const tsContent = ["타입을 지정할 수 있습니다."];
+    const tsContent = ['타입을 지정할 수 있습니다.'];
     const reactContent = [
-        "JSX문법을 통해 컴포넌트를 구성할 수 있습니다.",
-        "컴포넌트를 작은 단위로 쪼개서 재사용 가능하게 만들 수 있습니다.",
-        "컴포넌트의 생애주기를 알고있으며 useEffect훅을 사용 할 수 있습니다.",
-        "이벤트처리를 할 수 있습니다.",
-        "redux-toolkit을 통해 상태관리를 할수있습니다.",
-        "React Router을 통해 페이지 라이팅를 할수있습니다.",
-        "React-query 서버에서 가져온 데이터를 효과적으로 관리할 수 있습니다.",
+        'JSX문법을 통해 컴포넌트를 구성할 수 있습니다.',
+        '컴포넌트를 작은 단위로 쪼개서 재사용 가능하게 만들 수 있습니다.',
+        '컴포넌트의 생애주기를 알고있으며 useEffect훅을 사용 할 수 있습니다.',
+        '이벤트처리를 할 수 있습니다.',
+        'redux-toolkit을 통해 상태관리를 할수있습니다.',
+        'React Router을 통해 페이지 라이팅를 할수있습니다.',
+        'React-query 서버에서 가져온 데이터를 효과적으로 관리할 수 있습니다.',
     ];
-    const gitContent = ["기본은 압니다."];
+    const gitContent = ['기본은 압니다.'];
     return (
-        <SkillWrap id="Skills">
+        <SkillWrap id='Skills'>
             <h2>Skills</h2>
             <SkillContainer>
                 <StyledFaHtml5 onClick={() => setHtmlModal(!htmlModal)} />
                 {htmlModal && (
                     <SkillModal
                         Modal={setHtmlModal}
-                        title={"HTML5"}
+                        title={'HTML5'}
                         contents={htmlContent}
                     />
                 )}
                 <StyledFaFaCss3Alt onClick={() => setCssModal(!htmlModal)} />
                 {cssModal && (
-                    <SkillModal
-                        Modal={setCssModal}
-                        title={"CSS"}
-                        contents={cssContent}
-                    />
+                    <SkillModal Modal={setCssModal} title={'CSS'} contents={cssContent} />
                 )}
                 <StyledFaSiJavascript onClick={() => setJSModal(!htmlModal)} />
                 {jsModal && (
                     <SkillModal
                         Modal={setJSModal}
-                        title={"JAVASCRIPT"}
+                        title={'JAVASCRIPT'}
                         contents={jsContent}
                     />
                 )}
@@ -75,7 +71,7 @@ const Skills = () => {
                 {tsModal && (
                     <SkillModal
                         Modal={setTSModal}
-                        title={"TYPESCRIPT"}
+                        title={'TYPESCRIPT'}
                         contents={tsContent}
                     />
                 )}
@@ -83,17 +79,13 @@ const Skills = () => {
                 {reactModal && (
                     <SkillModal
                         Modal={setReactModal}
-                        title={"REACT"}
+                        title={'REACT'}
                         contents={reactContent}
                     />
                 )}
                 <StyledAiFillGithub onClick={() => setGitModal(!htmlModal)} />
                 {gitModal && (
-                    <SkillModal
-                        Modal={setGitModal}
-                        title={"GIT"}
-                        contents={gitContent}
-                    />
+                    <SkillModal Modal={setGitModal} title={'GIT'} contents={gitContent} />
                 )}
             </SkillContainer>
         </SkillWrap>
