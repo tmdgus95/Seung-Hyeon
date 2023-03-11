@@ -36,7 +36,7 @@ const IconStyle = css`
 const ContactWrap = styled.div`
     text-align: center;
     padding: 75px 15px;
-    background: var(--color-whit);
+    background: var(--color-white);
 `;
 
 const ContactInner = styled.div``;
