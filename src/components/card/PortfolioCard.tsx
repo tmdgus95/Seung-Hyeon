@@ -42,9 +42,13 @@ const PortfolioCard = () => {
 const PortfolioCardWrap = styled.div`
     max-width: 1280px;
     width: 1280px;
+    height: 100%;
 `;
 const PortfolioCardInner = styled.div`
     width: 100%;
+    h3 {
+        padding: 40px;
+    }
 `;
 const PortfolioCardContent = styled.div`
     display: flex;
@@ -52,11 +56,11 @@ const PortfolioCardContent = styled.div`
     width: 100%;
     img {
         width: 40%;
-        max-height: 500px;
+        height: 500px;
     }
     div {
         width: 40%;
-        margin-left: 10px;
+        margin-left: 30px;
     }
     div > div {
         width: 100%;
@@ -65,6 +69,9 @@ const PortfolioCardContent = styled.div`
     div > div > :nth-child(1) {
         text-align: left;
         width: 100px;
+    }
+    p {
+        margin: 0;
     }
 `;
 
