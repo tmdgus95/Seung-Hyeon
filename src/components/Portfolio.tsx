@@ -8,6 +8,7 @@ import PortfolioCard from "./card/PortfolioCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Portfolios } from "../util/Portfolios";
 
 const Portfolio = () => {
     useEffect(() => {
@@ -29,29 +30,34 @@ const Portfolio = () => {
                         pagination={{
                             clickable: true,
                         }}
-                        mousewheel={true}
-                        keyboard={true}
                         slidesPerView={1}
                         spaceBetween={30}
                         loop={true}
                         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                         className="mySwiper"
                     >
-                        <StyledPortfolio>
-                            <PortfolioCard />
+                        {Portfolios.map((portfolio) => {
+                            return (
+                                <StyledPortfolio key={portfolio.id}>
+                                    <PortfolioCard portfolio={portfolio} />
+                                </StyledPortfolio>
+                            );
+                        })}
+                        {/* <StyledPortfolio>
+                            <PortfolioCard Portfolios={Portfolios} />
                         </StyledPortfolio>
                         <StyledPortfolio>
-                            <PortfolioCard />
+                            <PortfolioCard Portfolios={Portfolios} />
+                        </StyledPortfolio> 
+                        <StyledPortfolio>
+                            <PortfolioCard Portfolios={Portfolios} />
                         </StyledPortfolio>
                         <StyledPortfolio>
-                            <PortfolioCard />
+                            <PortfolioCard Portfolios={Portfolios} />
                         </StyledPortfolio>
                         <StyledPortfolio>
-                            <PortfolioCard />
-                        </StyledPortfolio>
-                        <StyledPortfolio>
-                            <PortfolioCard />
-                        </StyledPortfolio>
+                            <PortfolioCard Portfolios={Portfolios} />
+                        </StyledPortfolio> */}
                     </StyledPortfolioSwiper>
                 </PortfolioContent>
             </PortfolioInner>

@@ -1,10 +1,10 @@
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Portfolio from "./components/Portfolio";
-import Skills from "./components/Skills";
-import Visual from "./components/Visual";
-import { createGlobalStyle } from "styled-components";
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Portfolio from './components/Portfolio';
+import Skills from './components/Skills';
+import Visual from './components/Visual';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     --color-footer-black: #222;
     --color-border-gray: #e5e5e5;
     --color-gmail: #df0f0f;
+    --color-youtube: #c4302b;
     --color-html: #f67925;
     --color-css: #379ad6;
     --color-js: #f7e018;

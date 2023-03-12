@@ -1,36 +1,73 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { FaYoutube } from "react-icons/fa";
+import { AiFillGithub } from "react-icons/ai";
+import { PortfolioCardProps } from "../../util/PortfolioCard";
 
-// title, feature, git 주소, 배포 주소, stack
+const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
+    const { title, feature, skills, img, site, git, youtube, iframe } =
+        portfolio;
 
-const PortfolioCard = () => {
     return (
         <PortfolioCardWrap>
             <PortfolioCardInner>
-                <h3>담화마켓</h3>
+                <h3>{title}</h3>
                 <PortfolioCardContent>
-                    <img
-                        src="/images/포트폴리오임시이미지.jpg"
-                        alt="포트폴리오 이미지"
-                    />
+                    {iframe ? (
+                        <Video>
+                            <iframe
+                                width="500"
+                                height="500"
+                                src={iframe}
+                                title="허니머니 그린"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </Video>
+                    ) : (
+                        <img src={img} alt="포트폴리오 이미지" />
+                    )}
+
                     <div>
                         <div>
                             <p>주요기능</p>
-                            <p>술 검색기능,장바구니 기능,구매 기능,쿠폰 기능</p>
+                            <p>{feature.join(", ")}</p>
                         </div>
-
-                        <div>
-                            <p>깃</p>
-                            <p>레파지토리 주소</p>
-                        </div>
-
-                        <div>
-                            <p>링크</p>
-                            <p>링크주소</p>
-                        </div>
-
+                        <br />
+                        <br />
                         <div>
                             <p>사용기술</p>
-                            <p>리액트 쿼리, 리액트 라우터 돔, Tailwind CSS</p>
+                            <p>{skills.join(", ")}</p>
+                        </div>
+
+                        <br />
+                        <br />
+
+                        <a
+                            href={site}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            사이트로 이동
+                        </a>
+
+                        <br />
+                        <br />
+
+                        <div>
+                            <a
+                                href={git}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <StyledAiFillGithub />
+                            </a>
+                            <a
+                                href={youtube}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <StyledAiFillYoutube />
+                            </a>
                         </div>
                     </div>
                 </PortfolioCardContent>
@@ -70,9 +107,11 @@ const PortfolioCardContent = styled.div`
     }
     div > div > :nth-child(1) {
         text-align: left;
-        width: 100px;
+        min-width: 100px;
     }
+
     p {
+        text-align: left;
         margin: 0;
     }
 
@@ -88,6 +127,31 @@ const PortfolioCardContent = styled.div`
             width: 80%;
         }
     }
+`;
+
+const Video = styled.div`
+    max-width: 40%;
+`;
+
+const IconStyle = css`
+    width: 200px;
+    height: 200px;
+`;
+
+const StyledAiFillGithub = styled(AiFillGithub)`
+    margin-left: 30px;
+    margin-right: 30px;
+    color: var(--color-black);
+    ${IconStyle}
+    @media (max-width: 768px) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+`;
+
+const StyledAiFillYoutube = styled(FaYoutube)`
+    color: var(--color-youtube);
+    ${IconStyle}
 `;
 
 export default PortfolioCard;
