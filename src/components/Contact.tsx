@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { SiGmail } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
+import { RiKakaoTalkFill } from "react-icons/ri";
 import EmailModal from "./modal/EmailModal";
 import { useState } from "react";
 
@@ -18,6 +19,13 @@ const Contact = () => {
                         rel="noopener noreferrer"
                     >
                         <StyledAiFillGithub />
+                    </a>
+                    <a
+                        href="https://open.kakao.com/o/sxQizD9e"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <StyledSiKakao />
                     </a>
                     <StyledSiGmail onClick={handleModal} />
                     {modal && <EmailModal handleModal={handleModal} />}
@@ -65,6 +73,12 @@ const StyledSiGmail = styled(SiGmail)`
     color: var(--color-gmail);
     cursor: pointer;
     ${IconStyle}
+`;
+const StyledSiKakao = styled(RiKakaoTalkFill)`
+    color: var(--color-kakao);
+    background-color: var(--color-kakao-background);
+    border-radius: 30px;
+    ${IconStyle};
 `;
 
 export default Contact;
