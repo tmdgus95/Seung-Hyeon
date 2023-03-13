@@ -136,6 +136,10 @@ const Video = styled.div`
 const IconStyle = css`
     width: 200px;
     height: 200px;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 300ms ease-in-out;
+    }
 `;
 
 const StyledAiFillGithub = styled(AiFillGithub)`

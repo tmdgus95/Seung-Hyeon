@@ -31,6 +31,10 @@ const IconStyle = css`
     width: 150px;
     height: 150px;
     margin: 40px 40px;
+    &:hover {
+        transform: scale(1.1);
+        transition: all 300ms ease-in-out;
+    }
 `;
 
 const ContactWrap = styled.div`
