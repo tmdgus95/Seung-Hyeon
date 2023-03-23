@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <HeaderWrapper>
             <HeaderInner>
-                <p>JSH</p>
+                <h2>JSH</h2>
                 <HeaderNav>
                     <ul>
                         <li>

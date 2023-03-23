@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 :root{
     --color-white: #ffffff;
     --color-black: #000000;
-    --color-visual-bg: #ffc75f;
+    --color-visual-bg: #99ccff;
     --color-footer-black: #222;
     --color-border-gray: #e5e5e5;
     --color-gmail: #df0f0f;

@@ -5,7 +5,7 @@ const Visual = () => {
         <VisualWrap id="Visual">
             <h1>Seung Hyeon'S PORTFOLIO</h1>
             <img src="/images/비쥬얼임시이미지.jpg" alt="메인사진" />
-            <h3>안녕하세요 Front-end developer 조승현입니다.</h3>
+            <h2>안녕하세요 Front-end developer 조승현입니다.</h2>
         </VisualWrap>
     );
 };

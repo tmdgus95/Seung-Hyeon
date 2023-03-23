@@ -77,7 +77,9 @@ const PortfolioContent = styled.div`
     text-align: center;
     height: 100%;
     h2 {
-        padding-bottom: 50px;
+        padding: 30px 0;
+        font-size: 32px;
+        color: var(--color-visual-bg);
     }
 `;
 

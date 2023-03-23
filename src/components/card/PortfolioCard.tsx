@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 import { FaYoutube } from "react-icons/fa";
 import { AiFillGithub } from "react-icons/ai";
+import { MdMonitor } from "react-icons/md";
 import { PortfolioCardProps } from "../../util/PortfolioCard";
 
 const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
@@ -42,13 +43,15 @@ const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
                         <br />
                         <br />
 
-                        <a
-                            href={site}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            사이트로 이동
-                        </a>
+                        {/* {site === "none" ? undefined : (
+                            <a
+                                href={site}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                사이트로 이동
+                            </a>
+                        )} */}
 
                         <br />
                         <br />
@@ -61,13 +64,23 @@ const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
                             >
                                 <StyledAiFillGithub />
                             </a>
-                            <a
-                                href={youtube}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <StyledAiFillYoutube />
-                            </a>
+                            {site === "none" ? (
+                                <a
+                                    href={youtube}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <StyledAiFillYoutube />
+                                </a>
+                            ) : (
+                                <a
+                                    href={site}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <StyledMdMonitor />
+                                </a>
+                            )}
                         </div>
                     </div>
                 </PortfolioCardContent>
@@ -87,6 +100,9 @@ const PortfolioCardInner = styled.div`
 
     h3 {
         padding: 40px;
+    }
+    h2 {
+        padding: 30px 0;
     }
 `;
 const PortfolioCardContent = styled.div`
@@ -154,6 +170,10 @@ const StyledAiFillGithub = styled(AiFillGithub)`
 `;
 
 const StyledAiFillYoutube = styled(FaYoutube)`
+    color: var(--color-youtube);
+    ${IconStyle}
+`;
+const StyledMdMonitor = styled(MdMonitor)`
     color: var(--color-youtube);
     ${IconStyle}
 `;
