@@ -26,21 +26,21 @@ const Skills = () => {
         "styledcomponent,tailwind와 같은 라이브러리를 이용하여 작업할 수 있습니다.",
     ];
     const jsContent = [
-        "let,const,arroy function 같은 es6에 대해 알고 있습니다.",
-        "DOM에 대해 알고있으면 조작할 수 있습니다.",
-        "AJAX를 이용해서 서버와 비동기 통신을 할수있습니다.",
-        "다양한 이벤트를 이벤트리스너를 통해 구현할 수 있습니다.",
+        "let, const, arroy function 같은 es6에 대해 알고 있습니다.",
+        "DOM에 대해 알고 있으면 조작할 수 있습니다.",
+        "AJAX를 이용해서 서버와 비동기 통신을 할 수 있습니다.",
+        "다양한 이벤트를 이벤트 리스너를 통해 구현할 수 있습니다.",
     ];
     const tsContent = [
         "타입에 대해서 이해하고 있습니다.",
         "interface, type을 이용해 타입을 지정할 수 있습니다.",
-        "react이벤트에 타입을 지정해 사용할 수 있습니다. ",
+        "react 이벤트에 타입을 지정해 사용할 수 있습니다. ",
     ];
     const reactContent = [
-        "JSX문법을 통해 컴포넌트를 구성할 수 있습니다.",
+        "JSX 문법을 통해 컴포넌트를 구성할 수 있습니다.",
         "컴포넌트를 작은 단위로 쪼개서 재사용 가능하게 만들 수 있습니다.",
-        "컴포넌트의 생애주기를 알고있으며 useEffect훅을 사용 할 수 있습니다.",
-        "Context API, Redux Toolkit을 통해 상태관리를 할 수 있습니다.",
+        "컴포넌트의 생애 주기를 알고 있으며 useEffect 훅을 사용할 수 있습니다.",
+        "Context API, Redux Toolkit을 통해 상태 관리를 할 수 있습니다.",
     ];
     const gitContent = [
         "GitHub을 통해 협업을 할 수 있습니다.",
