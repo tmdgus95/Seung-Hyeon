@@ -44,7 +44,7 @@ export const Portfolios = [
         iframe: "https://www.youtube.com/embed/_1uRGkBbhUc",
         site: "none",
         git: "https://github.com/tmdgus95/damhwamarket",
-        youtube: "https://www.youtube.com/watch?v=ugjnXVgQ3gY",
+        youtube: "https://www.youtube.com/watch?v=_1uRGkBbhUc",
     },
 
     {
